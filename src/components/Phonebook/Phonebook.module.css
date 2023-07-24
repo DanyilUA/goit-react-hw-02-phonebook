@@ -33,5 +33,5 @@
 .button:hover {
     background-color: rgb(115, 115, 218);
     color: #ffff;
-    border-radius: 4px;
+    border-radius: 5px;
 }
