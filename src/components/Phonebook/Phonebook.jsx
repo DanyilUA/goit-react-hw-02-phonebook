@@ -80,8 +80,8 @@ class Phonebook extends Component {
 
     export default Phonebook;
 
-// Phonebook.propTypes = {
-//     handleInputChange: PropTypes.func.isRequired,
-//     handleFomSubmit: PropTypes.func.isRequired,
-//     reset: PropTypes.func.isRequired,
-// }
+Phonebook.propTypes = {
+    handleInputChange: PropTypes.func,
+    handleFomSubmit: PropTypes.func,
+    reset: PropTypes.func,
+}
