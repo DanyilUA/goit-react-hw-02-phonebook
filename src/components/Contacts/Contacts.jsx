@@ -24,7 +24,7 @@ ContactsList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
         name: PropTypes.string.isRequired,
-        phone: PropTypes.string,
+        phone: PropTypes.string.isRequired,
     })
   ),
 };

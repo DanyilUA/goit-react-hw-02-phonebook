@@ -12,7 +12,6 @@ class Phonebook extends Component {
 
   nameInputId = nanoid();
   phoneInputId = nanoid();
-  filterInputId = nanoid();
 
   handleInputChange = e => {
     this.setState({
@@ -23,12 +22,7 @@ class Phonebook extends Component {
   handleFomSubmit = e => {
     e.preventDefault();
     console.log(this.state);
-    const newContact = {
-      id: nanoid(),
-      name: this.state.name,
-      phone: this.state.phone,
-    };
-    this.props.onSubmit(newContact);
+    this.props.onSubmit(this.state);
     this.reset();
   };
 
@@ -81,7 +75,5 @@ class Phonebook extends Component {
     export default Phonebook;
 
 Phonebook.propTypes = {
-    handleInputChange: PropTypes.func,
-    handleFomSubmit: PropTypes.func,
-    reset: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
 }
