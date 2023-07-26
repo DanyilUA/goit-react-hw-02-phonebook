@@ -7,7 +7,7 @@ import css from './Phonebook.module.css';
 class Phonebook extends Component {
   state = {
     name: '',
-    phone: '',
+    number: '',
   };
 
   nameInputId = nanoid();
@@ -27,7 +27,7 @@ class Phonebook extends Component {
   };
 
   reset = () => {
-    this.setState({ name: '', phone: '' });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
@@ -53,7 +53,7 @@ class Phonebook extends Component {
             Phone
             <input
               type="tel"
-              name="phone"
+              name="number"
               pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
               title="Phone should contain more then 5 numbers (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) ."
               required
