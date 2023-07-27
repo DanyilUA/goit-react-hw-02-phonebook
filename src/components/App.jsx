@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Phonebook from './Phonebook/Phonebook';
 import Filter from './Filter/Filter';
 import { ContactsList } from './Contacts/Contacts';
+import { nanoid } from 'nanoid';
+
 
 export class App extends Component {
   state = {
@@ -24,6 +26,8 @@ export class App extends Component {
       alert('This contact already exists.');
       return;
     }
+ 
+      newContact.id = nanoid();
 
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],

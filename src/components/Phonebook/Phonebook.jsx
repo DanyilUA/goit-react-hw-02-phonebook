@@ -57,7 +57,7 @@ class Phonebook extends Component {
               pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
               title="Phone should contain more then 5 numbers (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) ."
               required
-              value={this.state.phone}
+              value={this.state.number}
               onChange={this.handleInputChange}
               id={this.phoneInputId}
               className={css.input}
